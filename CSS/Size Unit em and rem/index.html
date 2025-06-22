@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent1 {
+        background-color: aqua;
+        font-size: 20px;
+      }
+      .child {
+        /* parent 20px *5= 100px */
+        font-size: 5rem;
+      }
+      .parent2 {
+        background-color: aqua;
+        /* deaflut 16px *3= 48px */
+        font-size: 3rem;
+     
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Size Unit</h1>
+    <ol>
+      <li>em</li>
+      <li>rem</li>
+    </ol>
+
+    <!-- em -->
+
+    <h1 style="text-decoration: underline">em :-</h1>
+    <p>
+      em apnay parent div kay mutabiq kam krta ha
+      <strong> <u>for exapmle </u> </strong> agar 1 div ha uska font size 10px
+      dia nay aar uskay andar 1 paragraph tag ha aar usko ham nay 5em font size
+      dia to wo parent kay div kay multiply hoga 10*5=50px
+    </p>
+
+    <!-- daikay size automaticly increae hogia -->
+    <div class="parent1">
+      <p class="child">Hello usama</p>
+    </div>
+
+    <!-- rem -->
+    <h1 style="text-decoration: underline">rem :-</h1>
+    <p>
+      em apnay body kay mutabiq kam krta ha
+      <strong> <u>for exapmle </u> </strong> agar 1 div ha uska font size 5rem
+      dia aar to wo body kay deflaut size kay sath multiply hoga body ka defalt
+      font-size 16px hota ha
+    </p>
+
+    <!-- daikay size automaticly increae hogia -->
+ <div class="parent2">hello usama</div>
+  </body>
+</html>
