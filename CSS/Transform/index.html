@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      .box1,
+      .box2,
+      .box3,
+      .box4,.box5 {
+        width: 100px;
+        height: 100px;
+
+        transition: all 1s ease-in-out;
+        margin-left: 40px;
+      }
+
+      .box1 {
+        background-color: aqua;
+      }
+      .box2 {
+        background-color: aquamarine;
+      }
+      .box3 {
+        background-color: blueviolet;
+      }
+      .box4 {
+        background-color: darkcyan;
+      }
+      .box5{
+        background-color:sandybrown;
+      }
+      .box1:hover {
+        scale: 1.5;
+      }
+      .box2:hover {
+        transform: translate(100px);
+      }
+      .box3:hover {
+        transform: Skew(30deg);
+      }
+      .box4:hover {
+        transform: rotate3d(1, 2, 3, 360deg);
+      }
+      .box5:hover{
+        transform: matrix(1, 2, 3, 4, 5, 6);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Transform Properties</h1>
+    <!-- scale -->
+    <section>
+      <ul>
+        <li><h2>Scale</h2></li>
+
+        <p>Scale say size increase ho jata ha</p>
+      </ul>
+
+      <div class="box1"></div>
+    </section>
+    <!-- transform -->
+    <section>
+      <ul>
+        <li><h2>Transalte</h2></li>
+
+        <p>Transalte say horizentaly ar vetcially ap move krwa sktay ha</p>
+      </ul>
+
+      <div class="box2"></div>
+    </section>
+    <!-- Skew -->
+    <section>
+      <ul>
+        <li><h2>Skew</h2></li>
+
+        <p>
+          Skew say horizentaly ar vetcially ap tircha mor sktay ha krwa sktay ha
+        </p>
+      </ul>
+
+      <div class="box3"></div>
+    </section>
+    <!-- Skew -->
+    <section>
+      <ul>
+        <li><h2>Rotate</h2></li>
+
+        <p>Rotate say ap rotate karwa sktay ha</p>
+      </ul>
+
+      <div class="box4"></div>
+    </section>
+    <!-- Skew -->
+    <section>
+      <ul>
+        <li><h2>Matrix</h2></li>
+
+        <p>
+          Matrix 1 shorthand property ha jis may ham ikaty propties ko likhta ha
+        </p>
+        <p>
+          transform: matrix(scaleX, skewY, skewX, scaleY, translateX,
+          translateY);
+        </p>
+        <p>transform: matrix(1, 2, 3, 4, 5, 6);</p>
+        <ul>
+          <li>Scale X = 1 (no change)</li>
+          <li>Skew Y = 2 shear vertically</li>
+          <li>Skew X = 3 (shear horizontally)</li>
+          <li>Scale Y = 4</li>
+          <li>Translate X = 5px</li>
+          <li>Translate Y = 6px</li>
+        </ul>
+      </ul>
+
+      <div class="box5"></div>
+    </section>
+  </body>
+</html>

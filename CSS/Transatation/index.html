@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transation</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: aqua;
+        /* transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 1s; */
+        transition: all 2s ease-in-out 1s;
+      }
+      .box:hover {
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <h1>Transation</h1>
+
+    <ul>
+      <li>transition-property: all;</li>
+      <li>transition-duration: 2s;</li>
+      <li>transition-timing-function: ease-in-out;</li>
+      <li>transition-delay: 1s;</li>
+    </ul>
+    <h1>Shorthand Transation Property</h1>
+    <ul>
+      <li>transition: all 2s ease-in-out 1s;</li>
+    </ul>
+  </body>
+</html>
