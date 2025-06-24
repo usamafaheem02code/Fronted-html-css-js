@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+      body {
+        background-color: #230448;
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-div {
+        /* background-color: #230448; */
+        width: 100%;
+        /* background-color: blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+      }
+
+      .circle1 {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        top: 250px;
+        left: 20px;
+        background: linear-gradient(rgba(237, 175, 186, 0.847), purple, aqua);
+      }
+      .circle2 {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        left: 300px;
+        background: linear-gradient(
+          rgba(237, 10, 142, 0.808),
+          rgba(39, 39, 129, 0.598),
+          rgba(228, 71, 170, 0.845)
+        );
+      }
+      .circle3 {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        top: 200px;
+        left: 600px;
+
+        background: linear-gradient(orange, purple, pink);
+      }
+      h1 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .box1 {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        width: 280px;
+
+        height: 420px;
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 1;
+      }
+      .image {
+        width: 150px;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0.155);
+        border-radius: 50%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      p {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .icons {
+        display: flex;
+        gap: 20px;
+        /* background-color: blue; */
+        width: 100%;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        /* background-color: blue; */
+      }
+      .icons div {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+      }
+      .icons div:hover {
+        background-color: rgba(12, 9, 9, 0.2);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .icons div .fa-brands {
+        font-size: 15px;
+      }
+
+      @media (max-width: 425px) {
+        .main-div {
+          flex-direction: column;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          padding: 40px;
+        }
+
+        .circle1 {
+          top: 90px;
+          left: 10px;
+        }
+        .circle2 {
+          top: 550px;
+          left: 70px;
+        }
+        .circle3 {
+          top: 1000px;
+          left: 5px;
+        }
+      }
+      @media (min-width: 425px) and (max-width: 769px) {
+        .main-div {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          flex-wrap: wrap;
+          padding: 40px;
+        }
+        .box1 {
+          width: 80%;
+        }
+        .box3 {
+          display: non;
+        }
+        .circle1 {
+          top: 10px;
+          left: 140px;
+        }
+        .circle2 {
+          top: 550px;
+          left: 70px;
+        }
+        .circle3 {
+          top: 1200px;
+          left: 250px;
+        }
+      }
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .main-div {
+          /* background-color: blue; */
+          width: 100%;
+          /* flex-wrap: wrap; */
+          justify-content: center; /* ✅ add this */
+          padding: 40px 20px;
+        }
+
+        .box1 {
+          width: 100%; /* ✅ makes cards half screen, nicely spaced */
+          margin: 10px;
+        }
+
+        .circle1 {
+          top: 120px;
+          left: 40px;
+        }
+        .circle2 {
+          top: 30px;
+          left: 300px;
+        }
+        .circle3 {
+          top: 200px;
+          left: 580px;
+        }
+      }
+      @media (min-width: 1024px) and (max-width: 1280px) {
+        .main-div {
+          /* background-color: blue; */
+          width: 100%;
+          /* flex-wrap: wrap; */
+          justify-content: center; /* ✅ add this */
+          padding: 40px 20px;
+        }
+
+        .box1 {
+          width: 100%; /* ✅ makes cards half screen, nicely spaced */
+          margin: 10px;
+        }
+
+        .circle1 {
+          top: 120px;
+          left: 40px;
+        }
+        .circle2 {
+          top: 30px;
+          left: 400px;
+        }
+        .circle3 {
+          top: 200px;
+          left: 800px;
+        }
+      }
+      @media (min-width: 1280px) and (max-width: 1440px) {
+        .main-div {
+          /* background-color: blue;	 */
+          width: 100%;
+          /* flex-wrap: wrap; */
+          justify-content: center; /* ✅ add this */
+          padding: 40px 20px;
+        }
+
+        .box1 {
+          width: 60%; /* ✅ makes cards half screen, nicely spaced */
+          margin: 10px;
+          height: 500px;
+        }
+
+        .circle1 {
+          top: 300px;
+          left: 40px;
+        }
+        .circle2 {
+          top: 40px;
+          left: 500px;
+        }
+        .circle3 {
+          top: 60px;
+          left: 1000px;
+        }
+      }
+      @media (min-width: 1440px) {
+        .main-div {
+          /* background-color: blue;	 */
+          width: 100%;
+          /* flex-wrap: wrap; */
+          justify-content: center; /* ✅ add this */
+          padding: 40px 20px;
+        }
+
+        .box1 {
+          width: 50%; /* ✅ makes cards half screen, nicely spaced */
+          margin: 10px;
+          height: 500px;
+        }
+
+        .circle1 {
+          top: 300px;
+          left: 40px;
+        }
+        .circle2 {
+          top: 40px;
+          left: 500px;
+        }
+        .circle3 {
+          top: 60px;
+          left: 1000px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="circle1"></div>
+      <div class="box1">
+        <!-- image -->
+        <div class="image">
+          <img src="./usama profile rembg copy.png" alt="" />
+        </div>
+        <!-- text -->
+        <div class="text">
+          <h1>Usama Faheem</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
+            necessitatibus ducimus sunt esse aut nesciunt culpa facere,
+            perspiciatis sed ut.
+          </p>
+        </div>
+        <!-- icons -->
+        <div class="icons">
+          <div><i class="fa-brands fa-facebook-f"></i></div>
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-linkedin-in"></i></div>
+          <div><i class="fa-brands fa-pinterest"></i></div>
+        </div>
+      </div>
+
+      <div class="circle2"></div>
+      <div class="box1">
+        <!-- image -->
+        <div class="image">
+          <img src="./usama profile rembg copy.png" alt="" />
+        </div>
+        <!-- text -->
+        <div class="text">
+          <h1>Usama Faheem</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
+            necessitatibus ducimus sunt esse aut nesciunt culpa facere,
+            perspiciatis sed ut.
+          </p>
+        </div>
+        <!-- icons -->
+        <div class="icons">
+          <div><i class="fa-brands fa-facebook-f"></i></div>
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-linkedin-in"></i></div>
+          <div><i class="fa-brands fa-pinterest"></i></div>
+        </div>
+      </div>
+      <div class="circle3"></div>
+      <div class="box1 box3">
+        <!-- image -->
+        <div class="image">
+          <img src="./usama profile rembg copy.png" alt="" />
+        </div>
+        <!-- text -->
+        <div class="text">
+          <h1>Usama Faheem</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
+            necessitatibus ducimus sunt esse aut nesciunt culpa facere,
+            perspiciatis sed ut.
+          </p>
+        </div>
+        <!-- icons -->
+        <div class="icons">
+          <div><i class="fa-brands fa-facebook-f"></i></div>
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-linkedin-in"></i></div>
+          <div><i class="fa-brands fa-pinterest"></i></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
