@@ -1,109 +1,120 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: sans-serif;
-  background-color: #f5f5f5;
-  padding: 2rem;
-}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-/* Container holding all content */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+      body {
+        font-family: sans-serif;
+        background-color: #f5f5f5;
+        padding: 2rem;
+      }
 
-/* Header styles */
-.haeder_body {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
 
-.header-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+      .haeder_body {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
 
-.header-disc {
-  font-size: 1.2rem;
-  color: #444;
-}
+      .header-title {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
 
-/* Grid layout for blog cards */
-.main-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
+      .header-disc {
+        color: #666;
+      }
 
-/* Blog card */
-.card-container {
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-}
+      .main-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
 
-/* Image */
-.card-image-container img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
+      .card-container {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-/* Title and description */
-.card-title-container {
-  padding: 1rem;
-}
+      .card-container:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
 
-.card-title {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-  text-decoration: none;
-}
+      .card-image-container {
+        display: block;
+        overflow: hidden;
+      }
 
-.card-disc p {
-  font-size: 0.95rem;
-  color: #555;
-}
+      .card-image-container img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
 
-/* Footer with author */
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-top: 1px solid #eee;
-}
+      .card-image-container:hover img {
+        transform: scale(1.1);
+      }
 
-.author-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+      .card-title-container {
+        padding: 1rem;
+      }
 
-.author-avator-container img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
+      .card-title {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+      }
 
-.author-info-container {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8rem;
-}
+      .card-disc p {
+        color: #666;
+        font-size: 0.95rem;
+      }
 
-.card-tag-container span {
-  background-color: #eee;
-  padding: 4px 10px;
-  font-size: 0.75rem;
-  border-radius: 20px;
-}
+      .card-footer {
+        padding: 1rem;
+        border-top: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .author-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .author-avator-container img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .author-info-container {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.85rem;
+        color: #555;
+      }
+
+      .card-tag-container span {
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+      }
+   
